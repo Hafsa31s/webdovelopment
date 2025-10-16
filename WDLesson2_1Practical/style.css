@@ -22,6 +22,9 @@ h1{ font-style : italic;}
 p{font-family : arial ;}
 /* Challenge 5: Change the family of font being used for all lists to "Comic Sans MS".  What element creates a list? */
 li{font-family : Comic Sans MS;}
-/* Chalenge 6: Change the background color of the div to blue, color of the text to white and the weight of the font to bold. 
-      div{
+/* Chalenge 6: Change the background color of the div to blue, color of the text to white and the weight of the font to bold.
+ 
 Hint:  You can specify several CSS rules for one element by separating the rules with commas.  Look at some example on w3schools */
+     div{
+      color:blue;
+}
