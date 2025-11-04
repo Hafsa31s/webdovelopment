@@ -18,7 +18,10 @@
       /* Challenge 6: Using internal styling,  change the color of the web page.
 
       /* Further challenges are located in style.css  */
-
+div {
+      background-color: rgb(221, 104, 221); 
+      color: rgb(88, 48, 97);
+    }
       /* Challenge 12: Create the other pages in the sitemap using index.html as the template. 
                        Modify the heading in the banner container appropriately to match the topic of the web page.
                        Modify the image included to match the topic of the web page.
@@ -30,14 +33,26 @@
   </head>
   <body>
     <!-- Challenge 1: Create the navigation bar in support of the sitemap associated with the website. -->
-
+ <nav>
+    
+      <a href="index.html">Home</a>
+      <a href="html.png">Html</a>
+      <a href="css.png">CSS</a>
+      <a href="js.png">JS</a>
+   
+  </nav>
     <!-- Challenge 2: Create a banner container with heading of "Web Development".  Give it a class of "banner".-->
-
+ <div class="banner">
+    <h1>Web Development</h1>
+  </div>
     <div class="main">
-      <!-- Challenge 3: Add the image of webicons.png-->
+     <!-- Challenge 3: Add the image of webicons.png-->
+      <img  width="400" height="200"src="webicons.png">
       <!-- Challenge 4: Using inline styling, resize the above image appropriately -->
+
       <!-- Challenge 5: Write a paragraph describing web development.  Discuss the purpose of HTML, CSS and JavaScript -->
 
+<p>Web development uses HTML, CSS, and JavaScript to build websites. HTML gives the page its structure and content, like text and images. CSS makes the page look nice with colors, fonts, and layouts. JavaScript adds interactivity, like buttons that work or forms that check your input. Together, they make websites functional, attractive, and easy to use.</p>
     </div>
 
   </body>
