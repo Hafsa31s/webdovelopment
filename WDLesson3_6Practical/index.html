@@ -24,13 +24,14 @@
     <div class="solutions">
       <!-- Challenge 1: UI for Average program. Note: User will enter three grades as three separate inputs. -->
       <!-- Challenge 2 is in script.js -->
-
+<input type = "text"id= "g1" placeholder="Enter grade 1">
+<input type = "text"id= "g1" placeholder="Enter grade 2">
+<input type = "text"id= "g1" placeholder="Enter grade 3">
     </div>
-    <div class="container subbanner">
+    <div class="output_average">
       <div>
         <h3> Slope </h3>
         <p>Calculate and display the slope of a line based on two points, (x<sub>1</sub>,y<sub>1</sub>) and (x<sub>2</sub>,y<sub>2</sub>) provided by the user.</p>
-
         <a class="links"href="https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-linear-equations-functions/8th-slope/a/slope-formula">Resource</a>
       </div>
     </div>
@@ -39,7 +40,13 @@
       <!-- Challenge 4 is in script.js -->
     </div>
     <div class="container subbanner">
-      <div>
+   <input type="text" id="x1" placeholder="Enter x1">
+  <input type="text" id="y1" placeholder="Enter y1">
+  <input type="text" id="x2" placeholder="Enter x2">
+  <input type="text" id="y2" placeholder="Enter y2">
+  <button onclick="calculateSlope()">Calculate Slope</button>
+  <div id="output_slope"></div>
+    <div>
         <h3> BMI </h3>
         <p>Calculate and display the BMI of person based on the person's height and weight.</p>
         <a class="links" href="https://www.cdc.gov/nccdphp/dnpao/growthcharts/training/bmiage/page5_2.html">Resource</a>
@@ -47,6 +54,13 @@
     </div>
     <div class="solutions last">
       <!-- Challenge 5: UI for BMI program. Note: User will enter their height and weight as two separate inputs. -->
+       <div class="solutions last">
+  <h3>BMI Calculator</h3>
+  <input type="text" id="weight" placeholder="Enter your weight">
+  <input type="text" id="height" placeholder="Enter your height">
+  <button onclick="calculateBMI()">Calculate BMI</button>
+  <div id="output_bmi"></div>
+</div>
       <!-- Challenge 6 is in script.js -->
     </div>
     <div id="footer" class="container center">

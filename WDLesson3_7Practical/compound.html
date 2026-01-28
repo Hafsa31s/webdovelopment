@@ -27,11 +27,16 @@
         </p>
         <hr>
         <!-- Challenge 3: Create the necessary UI in order to calculate the compound interest.  Observe all the variables on the right side of the equal side these are required pieces of information. -->
-
         <!-- Go to script.js to complete Challenge 4 --> 
-
-      </div>
-    </div>
+<div class="container">
+  <input type="number" id="principal" placeholder="Principal balance (P)" />
+  <input type="number" id="rate" placeholder="Interest Rate (r)" />
+  <input type="number" id="time" placeholder="Time (t)" />
+  <input type="number" id="compound" placeholder="Times Compounded (n)" />
+  <input type="button" value="Calculate Interest" onclick="calculateCompound()" /><br>
+  <p id="compoundOutput"></p>
+</div>
+    
 
     <div id="footer" class="container center">
       <h3>WD Lesson 3.7 Practical</h3>
