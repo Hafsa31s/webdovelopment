@@ -30,7 +30,6 @@ function calculateBMI() {
     "Your BMI is <strong>" + bmi + "</strong><br>Status: <strong>" + status + "</strong>";
   document.getElementById("bmiImage").src = image;
 }
-
 /* 
 Guideline:
 1) Create the function
@@ -41,4 +40,40 @@ Guideline:
 
 Use past examples, classwork and practicals to assist you in completing this practical.
 */
+function calculateBMI() {
+  let height = parseFloat(document.getElementById("height").value);
+  let weight = parseFloat(document.getElementById("weight").value);
 
+  if (!height || !weight || height <= 0 || weight <= 0) {
+    document.getElementById("result").innerHTML = "Please enter valid height and weight values.";
+    return;
+  }
+
+  let bmi = weight / (height * height);
+  bmi = bmi.toFixed(1);
+
+  let status = "";
+  let image = "";
+
+  if (bmi < 18.5) {
+    status = "Underweight";
+    image = "underweight.png";
+  } 
+  else if (bmi >= 18.5 && bmi <= 24.9) {
+    status = "Healthy Weight";
+    image = "healthy.png";
+  } 
+  else if (bmi >= 25 && bmi <= 29.9) {
+    status = "Overweight";
+    image = "overweight.png";
+  } 
+  else {
+    status = "Obesity";
+    image = "obese.png";
+  }
+
+  document.getElementById("result").innerHTML =
+    "Your BMI is <strong>" + bmi + "</strong><br>Status: <strong>" + status + "</strong>";
+
+  document.getElementById("bmiImage").src = image;
+}
