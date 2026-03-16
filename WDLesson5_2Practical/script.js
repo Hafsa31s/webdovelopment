@@ -15,8 +15,32 @@ Now that you have the template, use a for loop to produce all five pizza cards.
 // Go to style.css for Challenge 3
 
 //init() function is called when the page loads in index.html
-function init(){
-  
+// init() function is called when the page loads in index.html
+function init() {
+  let output = document.getElementById("output");
+  let html = "";
+  // Loop to generate 5 pizza cards
+  for (let i = 1; i <= 5; i++) {
 
+    let price = (Math.random() * 10 + 10).toFixed(2);
+
+    html += `
+      <div class="card">
+        <!-- Title Image -->
+        <img src="images/title${i}.png" class="title" alt="Pizza Title ${i}">
+
+        <img src="images/pizza${i}.png" class="pizza" alt="Pizza ${i}">
+
+        <!-- Price -->
+        <p>$${price}</p>
+        <p>
+          Quantity:
+          <input type="number" value="1" min="1">
+        </p>
+        <input type="button" value="Buy">
+      </div>
+    `;
+  }
+
+  output.innerHTML = html;
 }
-

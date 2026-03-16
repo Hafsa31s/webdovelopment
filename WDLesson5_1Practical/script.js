@@ -12,16 +12,20 @@ Year 3: $xxxxxx
 ...
 Year N: $xxxxxx
 */
-function calculateInterest() {
-  let principal = Number(document.getElementById("principal").value);
-  let rate = Number(document.getElementById("rate").value) / 100;
-  let years = Number(document.getElementById("years").value);
-  let balance = principal;
-  let build = "";
-  for (let t = 1; t <= years; t++) {
-    balance = balance * (1 + rate);
+function Interest() {
+  let p = parseFloat(document.getElementById("p").value);
+  let r = parseFloat(document.getElementById("r").value);
+  let n = parseFloat(document.getElementById("n").value);
+  let t = parseFloat(document.getElementById("t").value);
 
-    build += "Year " + t + ": $" + balance.toFixed(2) + "<br>";
+  let output = document.getElementById("output");
+
+  let build = "";
+  for (let i = 1; i < t; i+=1) {
+   let a = p * Math.pow (1 + r / n , n * t);
+
+    build += 'Year ${i} : $$ {a.to toFixed (2)}<br>'
   }
-  document.getElementById("output").innerHTML = build;
+  output.innerHTML = build;
+
 }
