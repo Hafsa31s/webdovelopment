@@ -6,6 +6,10 @@
 function calculateBMI() {
   let height = document.getElementById("height").value;
   let weight = document.getElementById("weight").value;
+    if (!height || !weight || height <= 0 || weight <= 0) {
+    document.getElementById("result").innerHTML = "Please enter valid height and weight values.";
+    return;
+  }
   let bmi = weight / (height * height);
   bmi = bmi.toFixed(1);
   let status = "";
