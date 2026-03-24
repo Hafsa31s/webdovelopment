@@ -11,14 +11,13 @@ function name(){
 
 }
 */
+/* Challenge 2:  Create the function for Challenge 1 scenario */
 function area() {
   let l = Number(document.getElementById("length").value);
   let w = Number(document.getElementById("width").value);
   let output = document.getElementById("output");
 
   let msg = "";
-
-  // Step 2: Decision
   if (l <= 0 || w <= 0) {
     msg = "Inappropriate measurement";
   } else {
@@ -26,20 +25,6 @@ function area() {
     msg = "Area is " + area;
   }
   output.innerHTML = msg;
-}
-/* Challenge 2:  Create the function for Challenge 1 scenario */
-function area()
-let l = ""
-let w = ""
-let output = ""
-let meg = "";
-
-if (l <= 0 || w <= 0) {
-  meg = "Inapproprite measurement ";
-
-} else {
-  meg = 'area is ${}'
-}
 }
 
 /* Challenge 3:  Complete the function for Pets Challenge on pets.html.  
