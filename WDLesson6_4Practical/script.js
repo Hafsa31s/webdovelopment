@@ -1,8 +1,8 @@
 async function init(){
   // Challenge 1: Retrieve the FBI data from https://raw.githubusercontent.com/rcastro2/WebDevelopment/refs/heads/main/data/fbi.json
   let link = "https://raw.githubusercontent.com/rcastro2/WebDevelopment/refs/heads/main/data/fbi.json"
-  info = await fetch(link);
-  data = await info.json();
+let info = await fetch(link);
+let data = await info.json();
 
   let output = document.getElementById("output");
   let build = "";
@@ -16,11 +16,14 @@ async function init(){
   */
 for (let i = 0; i < data.length; i++){
     let criminal = data[i];
+     let image = criminal.images?.[0]?.original || "";
+    let pdf = criminal.files?.[0]?.url || "#";
+
     build += `
       <div class="card">
-        <img class="fit" src="${criminal.images[0].original}"><br>
+        <img class="fit" src="${criminal.image}"><br>
         <h3>${criminal.title}</h3>
-        <a target="_blank" href="https://mozilla.github.io/pdf.js/web/viewer.html?file=${criminal.files[0].url}">
+        <a target="_blank" href="https://mozilla.github.io/pdf.js/web/viewer.html?file=${pdf}">
           View Poster
         </a>
       </div>
@@ -28,5 +31,4 @@ for (let i = 0; i < data.length; i++){
   }
 
   output.innerHTML = build;
-
 }
