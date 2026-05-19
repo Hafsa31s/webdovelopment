@@ -20,15 +20,44 @@ function celsius( temp ){
 /* ==========================================================*/
 
 //Challenge 3: Create a function bmi that accepts a person's height and weight and then returns the person's bmi.Hint:  Look up the formula. You have done this in past activities.
-
+function bmi(height, weight){
+  return weight / (height * height);
+}
 
 //Challenge 5: Create a function bmiCategory that accepts a person's bmi and returns their category as either "under weight", "normal weight", "over weight" or "obese".  Hint: This requires decision.  You have done this in past activities.
-
-
+function bmiCategory(b){
+  if(b < 18.5){
+    return "under weight";
+  }
+  else if(b < 25){
+    return "normal weight";
+  }
+  else if(b < 30){
+    return "over weight";
+  }
+  else{
+    return "obese";
+  }
+}
 //Challenge 7: Create a function lottery that accepts how many random numbers to produce and returns a string of that many random numbers.  Random numbers are from 1 to 48.  Hint: This solution requires a for loop and a build variable. Use the rnd( ) provided at the top to produce random numbers.  
+function lottery(amount){
+  let build = "";
 
+  for(let i = 0; i < amount; i++){
+    build += rnd(1,49) + " ";
+  }
 
-
+  return build;
+}
 //Challenge 9: Create a function results that accepts an array of "Y" or "N" response and returns the number of "Y" responses.
+function results(arr){
+  let total = 0;
 
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] == "Y"){
+      total++;
+    }
+  }
 
+  return total;
+}

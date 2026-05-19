@@ -13,21 +13,23 @@ function init(){
    display (`Teperature in Celsius is ${c}`)
 
   //Challenge 4: Set height and weight to appropriate numbers. Pass the variables as arguments to the bmi() created in Challenge 3 and store in a variable called b. Display the value of b.
-  let height;
-  let weight;
-  let b;
+height = 1.75;
+weight = 70;
+b = bmi(height, weight);
+display(`BMI is ${b}`);
 
   //Challenge 6:  Passed the value b from the previous challenge to the bmiCategory() and stored in a variable bc.  Display the category returned by bmiCategory().
-
-
-  
+let bc = bmiCategory(b);
+display(`BMI Category is ${bc}`);
   //Challenge 8: Call lottery with some number and display the results.
-
-
-
-
+let lotto = lottery(6);
+display(`Lottery Numbers: ${lotto}`);
   //Challengen 10: Create an array, survey which contains several of "Y" and "N" response.  Pass the survey to the results( ) and display the value returned.
+let survey = ["Y", "N", "Y", "Y", "N", "Y"];
 
+let yesResults = results(survey);
+
+display(`Number of Y responses: ${yesResults}`);
   
 }
 
